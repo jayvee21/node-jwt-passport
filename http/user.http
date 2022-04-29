@@ -1,0 +1,22 @@
+### Sign up User
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "email": "jayvee",
+    "password": "logmein"
+}
+
+### Login
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "jayvee",
+    "password": "logmein"
+}
+
+### Try accessing the dashboard
+GET http://localhost:3000/u/home
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjZiNWY3MjYxYzA3NTI1MTc2MjgzNTUiLCJpYXQiOjE2NTEyMDUwMjg0NjQsImV4cCI6MTY1MTIwNTExNDg2NH0.EvxGTR39vhZCwO5Q2KXgq7VYhJ1ZU_MfvZKORIkdqUB6AJmSn2vG5zP_THtw8ep_cjmIwbLQvD5L_zj5nm6wrT93pDP8-LVSHgfvkB2C7_7ARV8Ah_brPmcoBnUjDVXqJ36rq6_SNcgda6mfsgmWoo88Wn-SWA-R-sFRxoVedQYGPCL707MVYqZaJJblyu0Ug5og-cxD6K0Bqfzp3yxeRHxTKKbkmStd7ddnvvSDzYMIxgAkqUE-YdmuaDa6oSbHbjK6zWQkzMk2huyJVJv_Mir2RR1z25rAkHay7f2plc1q0-tZ2AXLdP7xfUW-Db1W3iI7vVNKSuxsKF4ZPAEVTGm8GVxBfdqbrC6W2JK_zhH5R5ZEqQsqHb4hEUVf_eRbzSxlocvpaFrsA_wlv1ryih0snCoBn7wpfHFa3zJ-AeDz9Ob2cBbae3tcqpa-P8-Quf_t7fDZIqqFs2KtE0LwiqjJFjpji03EMndUQ9RchCfFmfQk_ZeFKvf8CwLFXWF0kOHvkGMDwkR7pfXsFQPaWaIdREDE9dgLxgegZbTGkcNiqGyBov_L34LXKHF6S0PC0jwqrjHpcFiz679L-ymGRofQrLuIO1SWNpFqUdhuEkIJc8AEZQCuI4Z6siJg_uPI0Z5wWTj3b0GMlHwt3TOSGsIT0ePwbltYRmZ9lBLj8-E

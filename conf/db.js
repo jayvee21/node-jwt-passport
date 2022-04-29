@@ -15,11 +15,25 @@ const envStr = ( process.env.NODE_ENV && process.env.NODE_ENV === 'production' )
 /**
  * Connect to database environment
  */
-mongoose.connect(prodConn, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
 
-mongoose.connection.on('connected', () => {
-    console.log(`Database connected in ${envStr} environment.`)
-})
+async function connectWithRetry () { 
+    try {
+        await mongoose.connect(devConn, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+        });
+        mongoose.connection.on('connected', () => {
+            console.log(`Database connected in ${envStr} environment.`)
+        });
+        
+        
+    }catch( e ) {
+        console.log(e.message)
+        setTimeout(await connectWithRetry(), 5000);
+    }
+}
+
+connectWithRetry();
+
+
+
